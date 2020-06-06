@@ -11,6 +11,7 @@ var num;
 var speshCharac;
 var leng;
 var lowerArray;
+function promptUser(event){
 //prompt user for input
 var leng = prompt("How many characters does your password require?");
   // //ensuring appropriate length inputted
@@ -22,6 +23,9 @@ var leng = prompt("How many characters does your password require?");
   var upper = confirm("Does your password require uppercase letters?");
   var num = confirm("Does your password require numbers?");
   var speshCharac = confirm("Does your password require special characters?");
+  writePassword();
+}
+
 
 // Write password to the #password input
 function writePassword() {
@@ -56,7 +60,7 @@ function lowerCaseLetters() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", promptUser);
 
 //checking
 console.log(generateBtn);
